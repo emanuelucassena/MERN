@@ -1,9 +1,6 @@
----
-title: Arquitetura Monolítica de Software
----
 
-![](media/image1.jpeg){width="5.534238845144357in"
-height="3.1821872265966755in"}
+
+![Arquitetura Monolítica](./assets/monolitica.png)
 
 # Arquitetura Monolítica de Software
 
