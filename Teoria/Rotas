@@ -1,0 +1,47 @@
+# 🚀 Estudo de Rotas com Express
+
+import express from 'express'
+
+const app = express()
+
+// Métodos HTTP (CRUD)
+// - CREATE → POST (criar uma informação)
+// - READ → GET (buscar uma informação)
+// - UPDATE → PUT ou PATCH
+//     PUT → altera toda a informação
+//     PATCH → altera parte da informação
+// - DELETE → DELETE (apagar uma informação)
+
+// Estrutura de uma rota:
+// app.METODO('/rota', (req, res) => { ... })
+
+// Exemplo simples GET
+app.get('/', (req, res) => {
+  res.send('Hello World')
+})
+
+// Exemplo completo com todas as rotas CRUD
+app.get('/users', (req, res) => {
+  res.send('Listando usuários')
+})
+
+app.post('/users', (req, res) => {
+  res.send('Usuário criado')
+})
+
+app.put('/users/:id', (req, res) => {
+  res.send(`Usuário ${req.params.id} atualizado (PUT)`)
+})
+
+app.patch('/users/:id', (req, res) => {
+  res.send(`Usuário ${req.params.id} atualizado (PATCH)`)
+})
+
+app.delete('/users/:id', (req, res) => {
+  res.send(`Usuário ${req.params.id} removido`)
+})
+
+// Iniciando o servidor
+app.listen(3000, () => {
+  console.log('Servidor rodando na porta 3000 🚀')
+})
