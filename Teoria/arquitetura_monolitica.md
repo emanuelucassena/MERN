@@ -107,5 +107,3 @@ O **JWT** é usado para **autenticação e autorização**.
 
 ---
 
-📌 **Resumo:**  
-Essa arquitetura monolítica com **React + Express + MongoDB Atlas + JWT** é bastante utilizada em aplicações web modernas de **pequeno e médio porte**, permitindo integrar **frontend, backend e banco** de forma simples, organizada e eficiente.
