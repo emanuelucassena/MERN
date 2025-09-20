@@ -1,9 +1,16 @@
-import express from 'express'
+const express = require("express");
+const app = express();
 
-const app = express()
+// Importar rota de usuários
+const usuarioRota = require("./src/routes/usuario.rota");
 
-app.get('/', (req, res) => {
-  res.send('Hello World')
-})
+const porta = 3000;
 
-app.listen(3000)
+// Middleware para JSON (sempre bom ter)
+app.use(express.json());
+
+// Registrar rota
+app.use("/usuario", usuarioRota);
+
+// Iniciar servidor
+app.listen(porta, () => console.log(`Servidor rodando na porta ${porta}`));
